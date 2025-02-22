@@ -1,0 +1,8 @@
+@import url('global.css'); /* Global stilleri içe aktar */
+
+.blog {
+    background-color: var(--blog-primary-color);
+    text-align: center;
+    padding: 80px 20px;  /* Yüksekliği artırdık */
+    position: relative; /* Animasyonlu kalpler için gerekli */
+}

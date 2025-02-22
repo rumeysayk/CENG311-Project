@@ -1,0 +1,116 @@
+/* global.css */
+:root {
+
+    /* Header */
+    --navbar-background-color: #F6F5F2;
+    --login-button-color: #3f4a8a;
+
+    /* Footer */
+    --footer-primary-color: #333;
+    --footer-secondary-color: white;
+
+    /* Home Page */ 
+    --home-primary-color: #F8E8EE;
+    --home-h1-color: #a8a4ce;
+    --home-h2-color: #333;
+    --home-p-color: #373A40;
+    --home-circle-color: #ffdac1;
+    --home-small-circle-color: #ffb6b9;
+
+    /* Support Page FFF6E3*/
+    --support-primary-color: #D4F6FF;
+    --support-h2-color: #95BDFF;
+    --support-p-color: #373A40;
+
+    /* Events Page */
+    --events-primary-color: #E0FBE2;
+
+    /* Forum Page */
+    --forum-primary-color: #DFCCFB;
+
+    /* Blog Page */
+    --blog-primary-color: #FFF6E3;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: var(--navbar-background-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+    background: #f1f1f1;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background 0.3s;
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Menü bağlantıları için modern bir görünüm */
+    font-weight: 600; /* Yazıyı biraz kalın yap */
+}
+
+.nav-links .active, 
+.nav-links a:hover {
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Butonu */
+.login {
+    background: var(--login-button-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.login:hover {
+    opacity: 0.8;
+}
+
+h2 {
+    color: #0073e6;
+    text-align: center;
+}
+
+p {
+    color: #555;
+    text-align: justify;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    margin-top: 30px;
+}
