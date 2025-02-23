@@ -3,15 +3,15 @@
 
     /* Header */
     --navbar-background-color: #F6F5F2;
-    --login-button-color: #3f4a8a;
+    --login-button-color: #F2BED1;
 
     /* Footer */
-    --footer-primary-color: #333;
-    --footer-secondary-color: white;
+    --footer-primary-color: #F6F5F2;
+    --footer-secondary-color: #333;
 
     /* Home Page */ 
     --home-primary-color: #F8E8EE;
-    --home-h1-color: #a8a4ce;
+    --home-h1-color: #674188;
     --home-h2-color: #333;
     --home-p-color: #373A40;
     --home-circle-color: #ffdac1;
@@ -24,12 +24,20 @@
 
     /* Events Page */
     --events-primary-color: #E0FBE2;
+    --events-h2-color: #A5DD9B;
+    --events-p-color: #373A40;
 
     /* Forum Page */
     --forum-primary-color: #DFCCFB;
+    --forum-h2-color: #AA60C8;
+    --forum-p-color: #373A40;
+
 
     /* Blog Page */
     --blog-primary-color: #FFF6E3;
+    --blog-h2-color: #FFB26F;
+    --blog-h3-color: #E16A54;
+    --blog-p-color: #373A40;
 
 }
 
@@ -50,6 +58,13 @@ body {
     background-color: var(--navbar-background-color);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+.logo {
+    font-size: 26px;
+    color: #373A40;
+    font-family: "Playwrite IT Moderna", serif;
+    font-weight: 600;
+}
+
 /* Menu */
 .nav-links {
     display: flex;
@@ -70,8 +85,8 @@ body {
     padding: 8px 15px;
     border-radius: 20px;
     transition: background 0.3s;
-    font-family: 'Plus Jakarta Sans', sans-serif; /* Menü bağlantıları için modern bir görünüm */
-    font-weight: 600; /* Yazıyı biraz kalın yap */
+    font-family: "DynaPuff", serif;
+    font-weight: 400; 
 }
 
 .nav-links .active, 
@@ -87,8 +102,9 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 30px;
-    font-weight: bold;
     transition: opacity 0.3s;
+    font-family: "DynaPuff", serif;
+    font-weight: 400;
 }
 
 .login:hover {
@@ -110,7 +126,55 @@ p {
 footer {
     text-align: center;
     padding: 15px;
-    background: #333;
-    color: white;
-    margin-top: 30px;
+    background: var(--footer-primary-color);
+    color: var(--footer-secondary-color);
+}
+
+/* Shape */
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: float 6s infinite ease-in-out;
+}
+.shape.circle {
+    width: 10vw; 
+    height: 10vw;
+    left: 5vw;
+    top: 15vh;
+    animation-duration: 5s;
+    background-color: var(--home-circle-color);
+}
+.shape.small-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--home-small-circle-color);
+    right: 15%;
+    top: 30%;
+    animation-duration: 4s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 0.9; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Wave Divider */
+
+.wave-divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    background-color: transparent; 
+}
+.wave-img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%; 
+    display: block;   
 }
