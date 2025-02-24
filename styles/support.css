@@ -1,1 +1,204 @@
 @import url('global.css');
+
+/* Nav bar için aktif linkin stilini değiştirmek */
+.nav-links li a.active {
+    color: var(--support-primary-color);
+    background-color: var(--support-secondary-color); 
+}
+
+body {
+    background-color: var(--support-primary-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    margin-top: -10%;
+    font-size: 42px;
+    color: var(--support-secondary-color);
+    font-family: "Agbalumo", serif;
+    font-weight: 400;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 20px auto;
+    color: #555;
+}
+
+.therapy-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    margin-top: -5%;
+}
+
+.therapy-card {
+    /* background: white; */
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+    /* border-radius: 15px; */
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease-in-out;
+}
+
+.therapy-card img {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background: white;
+    padding: 20px
+}
+
+.therapy-card-text {
+    text-align: center;
+}
+
+.therapy-card h3 {
+    color: var(--support-secondary-color);
+    font-size: 22px;
+    font-family: "Quicksand", serif;
+    font-weight: 600;
+}
+
+.therapy-card p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Book a Session */
+.book-session {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.book-btn {
+    color: var(--support-secondary-color);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid var(--support-secondary-color);
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    text-decoration: none;
+    font-family: "Quicksand", serif;
+    font-weight: 600;
+  }
+  
+  .book-btn:after {
+    content: "";
+    background-color: var(--support-btn-color);
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .book-btn:hover:after {
+    top: 0px;
+    left: 0px;
+  }
+  
+  @media (min-width: 768px) {
+    .book-btn {
+      padding: 13px 50px 13px;
+    }
+  }
+
+/* Therapists Section */
+.therapists {
+    text-align: center;
+    background: var(--support-secondary-color);
+    padding: 80px 20px;
+    position: relative;
+}
+
+.therapists h2 {
+    font-size: 32px;
+    color: var(--support-primary-color);
+    margin-bottom: 15px;
+    font-family: "DynaPuff", serif;
+    font-weight: 500;
+}
+
+.therapist-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.therapist-card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    max-height: 400px;
+}
+
+.therapist-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); 
+
+}
+
+.therapist-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid var(--support-secondary-color); 
+    padding: 2px;
+    object-fit: cover;
+}
+
+.therapist-card h3 {
+    color: var(--support-secondary-color);
+    font-size: 20px;
+    font-family: "Quicksand", serif;
+    font-weight: 600;
+}
+
+.therapist-card p {
+    font-size: 14px;
+}
+
+/* Position the top-left image */
+.top-left-img {
+    position: absolute;
+    top: -22%;
+    left: 2%;
+    width: 22%; 
+    height: auto;
+}
+
+/* Position the bottom-right image */
+.bottom-right-img {
+    position: absolute;
+    bottom: -30%;
+    right: -5px;
+    width: 20%; 
+    height: auto;
+}

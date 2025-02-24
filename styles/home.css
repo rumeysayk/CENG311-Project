@@ -1,5 +1,11 @@
 @import url('global.css');
 
+/* Nav bar için aktif linkin stilini değiştirmek */
+.nav-links li a.active {
+    color: var(--home-primary-color);
+    background-color: var(--home-secondary-color); 
+}
+
 /* Home Section */
 .home {
     background-color: var(--home-primary-color);
@@ -58,7 +64,7 @@
 
 .intro p {
     font-size: 16px;
-    color: var(--home-p-color);
+    color: var(--p-color);
     width: 100%;  
     text-align: center; 
     margin-top: 0;
@@ -93,7 +99,7 @@
 
 .psych-support p {
     font-size: 18px;
-    color: var(--support-p-color);
+    color: var(--p-color);
     max-width: 700px;
     margin: 0 auto 30px auto;
     text-align: center;
@@ -159,7 +165,7 @@
 
 .support-text p {
     font-size: 16px;
-    color: var(--support-p-color);
+    color: var(--p-color);
     line-height: 1.5;
     margin-bottom: 20px;
     text-align: center;
@@ -184,7 +190,7 @@
 
 .events p {
     font-size: 18px;
-    color: var(--events-p-color);
+    color: var(--p-color);
     max-width: 700px;
     margin: 0 auto 30px auto;
     text-align: center;
@@ -268,7 +274,7 @@
 
 .forum p {
     font-size: 18px;
-    color: var(--forum-p-color);
+    color: var(--p-color);
     max-width: 700px;
     margin: 0 auto 30px auto;
     text-align: center;
@@ -326,7 +332,7 @@
 
 .forum-card p {
     font-size: 14px;
-    color: var(--forum-p-color);
+    color: var(--p-color);
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
@@ -371,7 +377,7 @@
 }
 
 .blog p {
-    color: var(--blog-p-color);
+    color: var(--p-color);
     font-size: 18px;
     max-width: 700px;
     margin: 0 auto 30px auto;
@@ -443,6 +449,7 @@
     border-radius: 30px;
     font-weight: bold;
     transition: opacity 0.3s;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .btn-view-all:hover {

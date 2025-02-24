@@ -4,8 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/support.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Delius&family=Domine:wght@400..700&family=DynaPuff:wght@400..700&family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+   
+    
 </head>
 <body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">WellMind
+                <!-- <img src="logo.png" alt="WellMind"> -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html" class="active">Psychological Support</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Forum & Community</a></li>
+                <li><a href="blog.html">Motivation & Blog </a></li>
+            </ul>
+            <a href="login.html" class="login">Login</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="wave-divider">
+            <img src="assets/images/support/wave-0.svg" alt="Wave Divider" class="wave-img">
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Start Your Healing</h1>
+            <p>
+                Everyone deserves a safe space to heal and grow. Whether you seek connection through 
+                group therapy or prefer one-on-one sessions, we’re here to support you. Explore your 
+                options and take the first step toward well-being.
+            </p>
+        </div>
     
+        <!-- Therapy Options -->
+        <div class="therapy-section">
+            <div class="therapy-card">
+                <img src="assets/icons/support/Group therapy.svg" alt="Group Therapy">
+                <div>
+                    <h3 class="therapy-card-text">Group Therapy</h3>
+                    <p class="therapy-card-text">Share, learn, and heal together in a supportive group environment.</p>
+                </div>
+                <!-- Book a Session Button -->
+                <div class="book-session">
+                    <a href="book_group.html" class="book-btn" role="button">Book a Session</a>
+                </div>
+            </div>
+            <div class="therapy-card">
+                <img src="assets/icons/support/Psychologist.svg" alt="Individual Therapy">
+                <div>
+                    <h3 class="therapy-card-text">Individual Therapy</h3>
+                    <p class="therapy-card-text">Personalized sessions tailored to your unique needs and growth.</p>
+                </div>
+                <!-- Book a Session Button -->
+                <div class="book-session">
+                    <a href="book_individual.html" class="book-btn" role="button">Book a Session</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wave-divider">
+            <img src="assets/images/support/stacked-waves.svg" alt="Wave Divider" class="wave-img">
+        </div>
+        
+        <!-- Meet Our Therapists -->
+        <div class="therapists">
+
+            <!-- Top-left and bottom-right images -->
+            <img src="assets/icons/support/Live collaboration.svg" alt="Top Left Image" class="top-left-img">
+            <img src="assets/icons/support/Team goals.svg" alt="Bottom Right Image" class="bottom-right-img">
+
+            <h2>Meet Our Therapists</h2>
+            <div class="therapist-container">
+                <div class="therapist-card">
+                    <img src="assets/images/support/therapists/therapist-1.jpg" alt="Therapist 1">
+                    <h3>Dr. Emily Carter</h3>
+                    <p>Specialist in anxiety & mindfulness practices.</p>
+                </div>
+                <div class="therapist-card">
+                    <img src="assets/images/support/therapists/therapist-2.PNG" alt="Therapist 2">
+                    <h3>James O'Connor, LCSW</h3>
+                    <p>Trauma healing & cognitive therapy expert.</p>
+                </div>
+                <div class="therapist-card">
+                    <img src="assets/images/support/therapists/therapist-3.jpg" alt="Therapist 3">
+                    <h3>Dr. Sophia Martinez</h3>
+                    <p>Relationship counseling & self-esteem building.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="wave-divider">
+            <img src="assets/images/support/wave-1.svg" alt="Wave Divider" class="wave-img">
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 WellMind. All rights reserved.</p>
+    </footer>
+    
+    <script src="path/to/main.js"></script>
 </body>
 </html>

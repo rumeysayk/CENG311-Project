@@ -1,6 +1,8 @@
 /* global.css */
 :root {
 
+    --p-color: #373A40;
+
     /* Header */
     --navbar-background-color: #F6F5F2;
     --login-button-color: #F2BED1;
@@ -11,43 +13,52 @@
 
     /* Home Page */ 
     --home-primary-color: #F8E8EE;
+    --home-secondary-color: #F2BED1;
     --home-h1-color: #674188;
     --home-h2-color: #333;
-    --home-p-color: #373A40;
     --home-circle-color: #ffdac1;
     --home-small-circle-color: #ffb6b9;
 
     /* Support Page FFF6E3*/
     --support-primary-color: #D4F6FF;
+    --support-secondary-color: #344CB7;
     --support-h2-color: #95BDFF;
-    --support-p-color: #373A40;
+    --support-btn-color: #6ca2f4;
+
 
     /* Events Page */
     --events-primary-color: #E0FBE2;
     --events-h2-color: #A5DD9B;
-    --events-p-color: #373A40;
 
     /* Forum Page */
     --forum-primary-color: #DFCCFB;
     --forum-h2-color: #AA60C8;
-    --forum-p-color: #373A40;
 
 
     /* Blog Page */
     --blog-primary-color: #FFF6E3;
     --blog-h2-color: #FFB26F;
     --blog-h3-color: #E16A54;
-    --blog-p-color: #373A40;
 
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: white;
 }
 
+p {
+    color: var(--p-color);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 26px;
+    color: #373A40;
+    font-family: "Playwrite IT Moderna", serif;
+    font-weight: 600;
+}
 
 /* Navbar */
 .navbar {
@@ -58,14 +69,7 @@ body {
     background-color: var(--navbar-background-color);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
-.logo {
-    font-size: 26px;
-    color: #373A40;
-    font-family: "Playwrite IT Moderna", serif;
-    font-weight: 600;
-}
 
-/* Menu */
 .nav-links {
     display: flex;
     list-style: none;
@@ -89,8 +93,9 @@ body {
     font-weight: 400; 
 }
 
-.nav-links .active, 
+.nav-links a.active, 
 .nav-links a:hover {
+    color: #F2BED1;
     background: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
