@@ -1,7 +1,17 @@
 @import url('global.css');
 
-/* Nav bar için aktif linkin stilini değiştirmek */
 .nav-links li a.active {
+    color: var(--support-primary-color);
+    background-color: var(--support-secondary-color); 
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: var(--support-primary-color);
+    background-color: var(--support-secondary-color); 
+}
+
+.login {
     color: var(--support-primary-color);
     background-color: var(--support-secondary-color); 
 }

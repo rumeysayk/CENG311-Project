@@ -1,9 +1,19 @@
 @import url('global.css');
 
-/* Nav bar için aktif linkin stilini değiştirmek */
 .nav-links li a.active {
-    color: var(--home-primary-color);
+    color: white;
     background-color: var(--home-secondary-color); 
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: white;
+    background-color: var(--home-secondary-color); 
+}
+
+.login {
+    color: white;
+    background: var(--home-secondary-color); 
 }
 
 /* Home Section */

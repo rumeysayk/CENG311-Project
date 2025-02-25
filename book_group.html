@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Group Therapy Session | WellMind</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/book_group.css">
+    
+    <script defer src="scripts/book_group.js"></script>
+</head>
+<body>
+
+    <main class="booking-container">
+        <h1>Book a Group Therapy Session</h1>
+        <p>Take the first step towards healing. Choose a date, time, and session topic that works for you.</p>
+
+        <form id="booking-form">
+            <!-- Name & Surname (Yan Yana) -->
+            <div class="input-group">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" placeholder="Enter your surname" required>
+                </div>
+            </div>
+
+            <!-- Email & Phone (Yan Yana) -->
+            <div class="input-group">
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+            </div>
+
+            <!-- Location: City & Place  -->
+            <div class="input-group">
+                <div>
+                    <label for="city">Select Your City:</label>
+                    <select id="city" required>
+                        <option value="" disabled selected>Choose a city</option>
+                        <option value="istanbul">Istanbul</option>
+                        <option value="ankara">Ankara</option>
+                        <option value="izmir">Izmir</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="location">Choose Location:</label>
+                    <select id="location" disabled required>
+                        <option value="" disabled selected>Select a city first</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Therapy Type -->
+            <div class="input-group">
+                <div>
+                    <label for="therapy-type">Select Therapy Type:</label>
+                    <select id="therapy-type" required>
+                        <option value="" disabled selected>Choose a therapy type</option>
+                        <option value="stress">Anxiety & Stress Management</option>
+                        <option value="trauma">Trauma Healing</option>
+                        <option value="social">Social Anxiety & Communication</option>
+                        <option value="self-esteem">Self-Esteem & Confidence</option>
+                        <option value="grief">Grief & Loss</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="group-type">Preferred Group Type:</label>
+                    <select id="group-type" required>
+                        <option value="" disabled selected>Choose group type</option>
+                        <option value="only-women">Only Women</option>
+                        <option value="only-men">Only Men</option>
+                        <option value="mixed">Mixed</option>
+                    </select>
+                </div>
+            </div>  
+
+            <!-- Date & Time -->
+            <div class="input-group">
+                <div>
+                    <label for="date">Select a Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="time">Select a Time Slot:</label>
+                    <select id="time" disabled required>
+                        <option value="" disabled selected>Select a date first</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Additional Notes -->
+            <label for="notes">Anything you'd like to share? (Optional)</label>
+            <textarea id="notes" placeholder="Write any concerns or preferences..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" role="button" class="submit-btn">Book My Session</button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-message" class="hidden">
+            <h2>🎉 Your session is booked!</h2>
+            <p>We look forward to seeing you at your session.</p>
+        </div>
+    </main>
+
+</body>
+</html>

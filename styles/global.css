@@ -95,15 +95,11 @@ p {
 
 .nav-links a.active, 
 .nav-links a:hover {
-    color: #F2BED1;
-    background: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Login Butonu */
 .login {
-    background: var(--login-button-color);
-    color: white;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 30px;
