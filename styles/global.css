@@ -30,15 +30,18 @@
 
     /* Events Page */
     --events-primary-color: #E0FBE2;
+    --events-secondary-color: #79AC78;
     --events-h2-color: #A5DD9B;
 
     /* Forum Page */
     --forum-primary-color: #DFCCFB;
+    --forum-secondary-color: #AD49E1;
     --forum-h2-color: #AA60C8;
 
 
     /* Blog Page */
     --blog-primary-color: #FFF6E3;
+    --blog-secondary-color: #ED9455;
     --blog-h2-color: #FFB26F;
     --blog-h3-color: #E16A54;
 

@@ -1,1 +1,21 @@
 @import url('global.css');
+
+.nav-links li a.active {
+    color: var(--events-primary-color);
+    background-color: var(--events-secondary-color); 
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: var(--events-primary-color);
+    background-color: var(--events-secondary-color); 
+}
+
+.login {
+    color: var(--events-primary-color);
+    background-color: var(--events-secondary-color); 
+}
+
+body {
+    background-color: var(--events-primary-color);
+}

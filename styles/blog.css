@@ -1,8 +1,21 @@
-@import url('global.css'); /* Global stilleri içe aktar */
+@import url('global.css'); 
 
-.blog {
+.nav-links li a.active {
+    color: var(--blog-primary-color);
+    background-color: var(--blog-secondary-color); 
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: var(--blog-primary-color);
+    background-color: var(--blog-secondary-color); 
+}
+
+.login {
+    color: var(--blog-primary-color);
+    background-color: var(--blog-secondary-color); 
+}
+
+body {
     background-color: var(--blog-primary-color);
-    text-align: center;
-    padding: 80px 20px;  /* Yüksekliği artırdık */
-    position: relative; /* Animasyonlu kalpler için gerekli */
 }

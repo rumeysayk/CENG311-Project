@@ -1,8 +1,21 @@
-@import url('global.css'); /* Global stilleri içe aktar */
+@import url('global.css'); 
 
-.forum {
+.nav-links li a.active {
+    color: var(--forum-primary-color);
+    background-color: var(--forum-secondary-color); 
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    color: var(--forum-primary-color);
+    background-color: var(--forum-secondary-color); 
+}
+
+.login {
+    color: var(--forum-primary-color);
+    background-color: var(--forum-secondary-color); 
+}
+
+body {
     background-color: var(--forum-primary-color);
-    text-align: center;
-    padding: 80px 20px;  /* Yüksekliği artırdık */
-    position: relative; /* Animasyonlu kalpler için gerekli */
 }
