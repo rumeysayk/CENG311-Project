@@ -40,6 +40,7 @@ h1 {
 }
 
 p {
+    margin-top: -10px;
     margin-bottom: 20px;
 }
 
@@ -88,23 +89,8 @@ select {
     flex: 1;
 }
 
-.location-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
-}
-
-.location-group label,
-.location-group select {
-    width: 100%;
-}
-
 .input-group {
     gap: 10%;
-}
-
-#city, #location {
-    width: 100%; 
 }
 
 /* Location dropdown ve city dropdown hizalamayı sağlamak için margin ve padding ayarları */
@@ -113,18 +99,6 @@ select {
     display: flex;
     flex-direction: column;
     gap: 10%;
-}
-
-#city, #location {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-#location {
-    margin-top: 5px;
-    opacity: 1;
 }
 
 textarea {

@@ -198,9 +198,9 @@ body {
 /* Position the top-left image */
 .top-left-img {
     position: absolute;
-    top: -22%;
+    top: -30%;
     left: 2%;
-    width: 22%; 
+    width: 26%; 
     height: auto;
 }
 
