@@ -2,6 +2,7 @@
 :root {
 
     --p-color: #373A40;
+    --h-color: #333;
 
     /* Header */
     --navbar-background-color: #F6F5F2;
@@ -36,6 +37,7 @@
     /* Forum Page */
     --forum-primary-color: #DFCCFB;
     --forum-secondary-color: #AD49E1;
+    --forum-tertiary-color: #7A1CAC;
     --forum-h2-color: #AA60C8;
 
 
