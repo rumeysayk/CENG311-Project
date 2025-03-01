@@ -160,6 +160,7 @@ body {
     padding: 8px 15px;
     font-size: 14px;
     font-weight: 600;
+    text-decoration: none;
     font-family: "Quicksand", sans-serif;
     color: white;
     background-color: var(--forum-secondary-color);
