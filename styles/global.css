@@ -30,9 +30,11 @@
 
 
     /* Events Page */
-    --events-primary-color: #E0FBE2;
-    --events-secondary-color: #79AC78;
-    --events-h2-color: #A5DD9B;
+      --events-primary-color: #E0FBE2;
+      --events-secondary-color: #79AC78;
+      --events-h3-color: #A5DD9B;
+      --events-h2-color: #3e553b;
+      --events-btn-color: #acd7c2;
 
     /* Forum Page */
     --forum-primary-color: #DFCCFB;
@@ -67,6 +69,9 @@ p {
     font-weight: 600;
 }
 
+header{
+    width: 100%;
+}
 /* Navbar */
 .navbar {
     display: flex;
