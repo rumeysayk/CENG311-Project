@@ -1,0 +1,174 @@
+@import url('global.css');
+
+/* Sayfa Genel Ayarları */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--home-primary-color);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 85vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sol Taraf */
+.left-side {
+    width: 50%;
+    background-color: var(--home-tertiary-color);
+    position: relative;
+    border-radius: 20px 0 0 20px;
+}
+
+.left-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sağ Taraf */
+.right-side {
+    width: 50%;
+    background-color: var(--home-h1-color);
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side h2 {
+    color: var(--home-primary-color);
+    font-family: "Playwrite IT Moderna", cursive;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+p {
+    color: var(--home-primary-color);
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+/* Form elemanları */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    color: var(--home-primary-color);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--home-h1-color);
+    border-radius: 5px;
+    background: var(--home-primary-color);
+    color: var(--home-quaternary-color);
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--home-quaternary-color); 
+    
+}
+
+input::placeholder {
+    color: var(--home-h1-color); 
+    font-style: italic;
+}
+
+input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1; 
+    width: 50%; 
+}
+
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password-container input {
+    width: 100%;
+}
+
+/* Remember me & Forgot password */
+.checkbox-container{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--home-quaternary-color);
+    text-decoration: none;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* Create account butonu */
+.create-account-btn {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    background: var(--home-primary-color);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    color: var(--home-h1-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-account-btn:hover {
+    background: var(--home-quaternary-color);
+}
+
+.create-account-btn a {
+    text-decoration: none;
+    color: var(--home-h1-color);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+
