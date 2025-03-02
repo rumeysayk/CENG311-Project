@@ -168,11 +168,3 @@ body {
     }
 }
 
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: var(--footer-primary-color);
-    color: var(--footer-secondary-color);
-}
