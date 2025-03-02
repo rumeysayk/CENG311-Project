@@ -15,7 +15,9 @@
     /* Home Page */ 
     --home-primary-color: #F8E8EE;
     --home-secondary-color: #F2BED1;
-    --home-h1-color: #674188;
+    --home-tertiary-color: #FDCEDF;
+    --home-quaternary-color: #AC1754;
+    --home-h1-color: #F37199;
     --home-h2-color: #333;
     --home-circle-color: #ffdac1;
     --home-small-circle-color: #ffb6b9;
@@ -45,9 +47,11 @@
 
     /* Blog Page */
     --blog-primary-color: #FFF6E3;
-    --blog-secondary-color: #ffc188;
-    --blog-h2-color: #ED9455;
+    --blog-secondary-color: #ED9455;
+    --blog-h2-color: #FFB26F;
     --blog-h3-color: #E16A54;
+
+
 
 }
 
