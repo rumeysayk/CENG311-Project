@@ -39,7 +39,7 @@ body {
 /* Sağ Taraf */
 .right-side {
     width: 50%;
-    background-color: var(--home-h1-color);
+    background-color: var(--background-white);
     padding: 50px;
     color: white;
     display: flex;
@@ -48,7 +48,7 @@ body {
 }
 
 .right-side h2 {
-    color: var(--home-primary-color);
+    color: var(--home-h1-color);
     font-family: "Playwrite IT Moderna", cursive;
     font-weight: 700;
     font-size: 30px;
@@ -56,7 +56,7 @@ body {
 }
 
 p {
-    color: var(--home-primary-color);
+    color: var(--home-h1-color);
     font-size: 16px;
     margin-bottom: 30px;
     text-align: center;
@@ -72,7 +72,7 @@ form {
 label {
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
-    color: var(--home-primary-color);
+    color: var(--home-h1-color);
     font-size: 14px;
     margin-bottom: 5px;
 }
@@ -85,13 +85,13 @@ input {
     border: 2px solid var(--home-h1-color);
     border-radius: 5px;
     background: var(--home-primary-color);
-    color: var(--home-quaternary-color);
+    color: var(--home-h1-color);
     font-size: 16px;
     outline: none;
 }
 
 input:focus {
-    border-color: var(--home-quaternary-color); 
+    border-color: var(--home-h1-color); 
     
 }
 
@@ -152,17 +152,13 @@ a {
     text-align: center;
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
-    background: var(--home-primary-color);
+    background: var(--home-quaternary-color);
     border: none;
     padding: 12px;
     font-size: 16px;
-    color: var(--home-h1-color);
+    color: var(--home-primary-color);
     border-radius: 5px;
     cursor: pointer;
-}
-
-.create-account-btn:hover {
-    background: var(--home-quaternary-color);
 }
 
 .create-account-btn a {
