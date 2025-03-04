@@ -95,7 +95,7 @@ input:focus {
 }
 
 input::placeholder {
-    color: var(--home-h1-color); 
+    color: var(--home-secondary-color); 
     font-style: italic;
 }
 

@@ -87,14 +87,15 @@ body {
 .card-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 15px;
     padding: 8px;
     border-top: 1px solid #ddd;
 }
 
 .username {
-    margin-left: -20%;
+    margin-right: 20px; /* Kullanıcı adı ile emoji arasına boşluk ekler */
+    font-weight: bold;
 }
 
 .card-footer img {
@@ -111,6 +112,31 @@ body {
     margin-left: 10px;
     font-size: 14px;
     color: #666;
+    margin-left: 0px; /* Sayılarla SVG arasındaki boşluğu sıfırlıyoruz */
+    
+}
+
+.like-comment {
+    display: flex;
+    align-items: center;
+    margin-right: 5px; /* Sağdaki öğelerle araya boşluk ekliyoruz */
+}
+
+.emoji-icon {
+    width: 24px !important;
+    height: 24px !important;
+    position: relative;
+    margin-right: 0;
+    left: 10px;
+    top: 5px;
+}
+
+.discussion-item .emoji-icon {
+    top: 0;
+}
+
+.like-comment + .like-comment {
+    margin-left: 15px; /* Diğer yorum kısmı ile boşluk bırakıyoruz */
 }
 
 /* Discussions Bölümü */

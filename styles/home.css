@@ -363,6 +363,7 @@
     border-radius: 30px;
     font-weight: bold;
     transition: opacity 0.3s;
+    font-family: "Quicksand", sans-serif;
 }
 
 .forum-btn:hover {
