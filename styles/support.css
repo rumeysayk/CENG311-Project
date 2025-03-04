@@ -39,7 +39,7 @@ body {
     font-size: 18px;
     max-width: 700px;
     margin: 20px auto;
-    color: #555;
+    color: var(--p-color);
 }
 
 .therapy-section {
@@ -101,24 +101,29 @@ body {
     border: 1px solid var(--support-secondary-color);
     cursor: pointer;
     position: relative;
-    background-color: rgba(0, 0, 0, 0);
     user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
     text-decoration: none;
     font-family: "Quicksand", serif;
     font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    z-index: 1;
   }
-  
+
+  .book-btn:hover {
+    color: white;
+  }
+
   .book-btn:after {
     content: "";
     background-color: var(--support-btn-color);
     width: 100%;
-    z-index: -1;
-    position: absolute;
     height: 100%;
+    position: absolute;
     top: 7px;
     left: 7px;
+    z-index: -1;
+    pointer-events: none;
     transition: 0.2s;
   }
   
@@ -127,7 +132,7 @@ body {
     left: 0px;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 760px) {
     .book-btn {
       padding: 13px 50px 13px;
     }

@@ -73,11 +73,11 @@
 }
 
 .intro p {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--p-color);
     width: 100%;  
     text-align: center; 
-    margin-top: 0;
+    margin-top: 10px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
 }

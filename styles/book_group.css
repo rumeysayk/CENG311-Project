@@ -59,14 +59,45 @@ label {
     font-weight: 600;
 }
 
-input, textarea {
+/* Input alanındaki placeholder'ı gri yap */
+input::placeholder {
+    color: #8e8e8e;
+}
+  
+  /* Input alanı aktif olduğunda (kullanıcı yazdıktan sonra) yazı rengi koyulaşır */
+input:not(:placeholder-shown) {
     color: var(--p-color);
+}
+
+input, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
 }
+
+/* Date Input için */
+input[type="date"] {
+    color: #8e8e8e;
+  }
+  
+  /* Kullanıcı tarih seçtiğinde rengi koyulaşsın */
+  input[type="date"]:valid {
+    color: var(--p-color);
+  }
+  
+  /* Tarih seçilmemişse ikonu gri yap, seçildiyse koyulaştır */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: grayscale(100%);
+    opacity: 0.6;
+  }
+  
+  /* Kullanıcı tarih seçtiğinde takvim ikonu koyulaşsın */
+  input[type="date"]:valid::-webkit-calendar-picker-indicator {
+    filter: none;
+    opacity: 1;
+  }
 
 select {
     color: #8e8e8e;
@@ -75,6 +106,16 @@ select {
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
+}
+
+/* Select kutusunda bir seçenek seçildiğinde rengi koyulaştırmak */
+select:valid {
+    color: var(--p-color);
+}
+  
+  /* Select kutusunun varsayılan "placeholder" gibi görünen disabled seçeneğini gri yapmak */
+  select option:disabled {
+    color: #8e8e8e;
 }
 
 .input-group, .therapy-group {
@@ -159,6 +200,11 @@ textarea {
   width: auto;
   display: block;
   margin: 0 auto;
+}
+
+.submit-btn:hover {
+    background-color: var(--support-secondary-color);
+    border-color: var(--support-secondary-color);
 }
 
 .submit-btn:focus-visible {
