@@ -1,5 +1,6 @@
 @import url('global.css');
 
+/* General body styles to center content and create a full-page layout */
 body {
     background-color: var(--support-primary-color);
     display: flex;
@@ -9,16 +10,18 @@ body {
     margin: 0;
 }
 
+/* Universal box-sizing rule for all elements and pseudo-elements */
 *,
 *::before,
 *::after {
-    box-sizing: border-box; /* Padding ve border, toplam genişlik ve yükseklik içine dahil edilir */
+    box-sizing: border-box; 
 }
 
 .booking-image {
     width: 50%;
 }
 
+/* Main container for the booking form with padding and a shadow effect */
 .booking-container {
     max-width: 650px;
     width: 50%;
@@ -44,12 +47,14 @@ p {
     margin-bottom: 20px;
 }
 
+/* Form layout with flexbox to arrange elements vertically */
 form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* Styling the labels for form inputs */
 label {
     font-weight: 300;
     text-align: left;
@@ -60,12 +65,10 @@ label {
     font-weight: 600;
 }
 
-/* Input alanındaki placeholder'ı gri yap */
 input::placeholder {
     color: #8e8e8e;
 }
-  
-  /* Input alanı aktif olduğunda (kullanıcı yazdıktan sonra) yazı rengi koyulaşır */
+
 input:not(:placeholder-shown) {
     color: var(--p-color);
 }
@@ -78,29 +81,25 @@ input, textarea {
     font-size: 14px;
 }
 
-
-/* Date Input için */
 input[type="date"] {
     color: #8e8e8e;
   }
-  
-  /* Kullanıcı tarih seçtiğinde rengi koyulaşsın */
+
   input[type="date"]:valid {
     color: var(--p-color);
   }
   
-  /* Tarih seçilmemişse ikonu gri yap, seçildiyse koyulaştır */
   input[type="date"]::-webkit-calendar-picker-indicator {
     filter: grayscale(100%);
     opacity: 0.6;
   }
   
-  /* Kullanıcı tarih seçtiğinde takvim ikonu koyulaşsın */
   input[type="date"]:valid::-webkit-calendar-picker-indicator {
     filter: none;
     opacity: 1;
   }
 
+/* Styling for select dropdown elements */
 select {
     color: #8e8e8e;
     width: 100%;
@@ -110,12 +109,10 @@ select {
     font-size: 14px;
 }
 
-/* Select kutusunda bir seçenek seçildiğinde rengi koyulaştırmak */
 select:valid {
     color: var(--p-color);
 }
-  
-  /* Select kutusunun varsayılan "placeholder" gibi görünen disabled seçeneğini gri yapmak */
+
   select option:disabled {
     color: #8e8e8e;
 }
@@ -135,7 +132,7 @@ select:valid {
     gap: 10%;
 }
 
-/* Location dropdown ve city dropdown hizalamayı sağlamak için margin ve padding ayarları */
+/* Location dropdown and city dropdown alignment with margin and padding settings */
 .input-group > div {
     flex: 1;
     display: flex;
@@ -148,8 +145,7 @@ textarea {
     min-height: 80px;
 }
 
-/* Submit Button */
-
+/* Styling the submit button with hover and active effects */
 .submit-btn {
   background-color: var(--support-tertiary-color);
   border: 1px solid var(--support-tertiary-color);

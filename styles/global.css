@@ -1,6 +1,7 @@
 /* global.css */
 :root {
 
+    /* Define global color variables for easy theming */
     --p-color: #373A40;
     --h-color: #333;
     --background-white: #FBFBFB;
@@ -23,14 +24,13 @@
     --home-circle-color: #ffdac1;
     --home-small-circle-color: #ffb6b9;
 
-    /* Support Page FFF6E3*/
+    /* Support Page */
     --support-primary-color: #D4F6FF;
     --support-secondary-color: #344CB7;
     --support-tertiary-color: #A7E6FF;
     --support-h2-color: #95BDFF;
     --support-btn-color: #6ca2f4;
     --support-label-color: #3C4048;
-
 
     /* Events Page */
       --events-primary-color: #E0FBE2;
@@ -51,9 +51,6 @@
     --blog-secondary-color: #ffc188;
     --blog-h2-color: #ED9455;
     --blog-h3-color: #E16A54;
-
-
-
 }
 
 body {
@@ -143,7 +140,7 @@ header {
     
 }
 
-/* Login Butonu */
+/* Login Button */
 .login {
     text-decoration: none;
     padding: 10px 20px;
@@ -195,7 +192,6 @@ footer {
 }
 
 /* Shape */
-
 .shape {
     position: absolute;
     border-radius: 50%;
@@ -227,7 +223,6 @@ footer {
 
 
 /* Wave Divider */
-
 .wave-divider {
     width: 100%;
     display: flex;

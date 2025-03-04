@@ -1,5 +1,6 @@
 @import url('global.css');
 
+/* Styles for active navigation links */
 .nav-links li a.active {
     color: var(--support-primary-color);
     background-color: var(--support-secondary-color); 
@@ -11,6 +12,7 @@
     background-color: var(--support-secondary-color); 
 }
 
+/* Styles for login button */
 .login {
     color: var(--support-primary-color);
     background-color: var(--support-secondary-color); 
@@ -42,6 +44,7 @@ body {
     color: var(--p-color);
 }
 
+/* Therapy section layout */
 .therapy-section {
     display: flex;
     justify-content: center;
@@ -50,13 +53,11 @@ body {
     margin-top: -5%;
 }
 
+/* Individual therapy card styles */
 .therapy-card {
-    /* background: white; */
     padding: 20px;
     width: 320px;
     text-align: center;
-    /* border-radius: 15px; */
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -85,12 +86,13 @@ body {
     font-size: 16px;
 }
 
-/* Book a Session */
+/* Book a Session Section */
 .book-session {
     text-align: center;
     margin: 40px 0;
 }
 
+/* Book a session button */
 .book-btn {
     color: var(--support-secondary-color);
     font-size: 16px;
@@ -162,6 +164,7 @@ body {
     padding: 20px;
 }
 
+/* Individual therapist card styling */
 .therapist-card {
     background: white;
     padding: 20px;

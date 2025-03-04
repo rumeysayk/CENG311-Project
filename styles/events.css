@@ -1,5 +1,6 @@
 @import url('global.css');
 
+/* Active state for navigation links */
 .nav-links li a.active {
     color: var(--events-primary-color);
     background-color: var(--events-secondary-color);
@@ -11,6 +12,7 @@
     background-color: var(--events-secondary-color);
 }
 
+/* Style for the login button */
 .login {
     color: var(--events-primary-color);
     background-color: var(--events-secondary-color);

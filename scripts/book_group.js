@@ -1,3 +1,5 @@
+// This script manages dynamic date, time, and location selection in a booking form and displays a success message upon submission.
+
 document.addEventListener("DOMContentLoaded", function () {
     const dateInput = document.getElementById("date");
     const timeSelect = document.getElementById("time");

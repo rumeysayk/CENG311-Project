@@ -17,15 +17,17 @@
 </head>
 <body>
 
+    <!-- Group therapy image -->
     <div class="booking-image">
         <img src="assets/icons/support/Group therapy-2.svg" alt="Group Therapy">
     </div>
 
     <main class="booking-container">
+        <!-- Booking form -->
         <form id="booking-form">
             <h1>Book a Group Therapy Session</h1>
             <p>Take the first step towards healing. Choose a date, time, and session topic that works for you.</p>
-            <!-- Name & Surname -->
+            <!-- Name & Surname fields -->
             <div class="input-group">
                 <div>
                     <label for="name">Name:</label>
@@ -37,7 +39,7 @@
                 </div>
             </div>
 
-            <!-- Email & Phone -->
+            <!-- Email & Phone fields -->
             <div class="input-group">
                 <div>
                     <label for="email">Email Address:</label>
@@ -49,7 +51,7 @@
                 </div>
             </div>
 
-            <!-- Location: City & Place  -->
+            <!-- Location selection: City & Place -->
             <div class="input-group">
                 <div>
                     <label for="city">Select Your City:</label>
@@ -68,7 +70,7 @@
                 </div>
             </div>
 
-            <!-- Therapy Type -->
+            <!-- Therapy type selection -->
             <div class="input-group">
                 <div>
                     <label for="therapy-type">Select Therapy Type:</label>
@@ -92,7 +94,7 @@
                 </div>
             </div>  
 
-            <!-- Date & Time -->
+            <!-- Date & Time selection -->
             <div class="input-group">
                 <div>
                     <label for="date">Select a Date:</label>
@@ -106,7 +108,7 @@
                 </div>
             </div>
 
-            <!-- Additional Notes -->
+            <!-- Additional notes fields -->
             <label for="notes">Anything you'd like to share? (Optional)</label>
             <textarea id="notes" placeholder="Write any concerns or preferences..."></textarea>
 
@@ -114,7 +116,7 @@
             <button type="submit" role="button" class="submit-btn">Book My Session</button>
         </form>
 
-         <!-- Success Message -->
+         <!-- Success Message (hidden by default) -->
         <div id="success-message" class="hidden">
             <h2>Your session is booked!</h2>
             <p>We look forward to seeing you at your session.</p>

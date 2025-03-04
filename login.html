@@ -16,27 +16,31 @@
 </head>
 <body>
 
+    <!-- Main Login Container -->
     <div class="login-container">
-        <!-- Sol taraf (Görsel) -->
+        <!-- Left side: Image section -->
         <div class="left-side">
             <img src="assets/icons/login/Login.svg" alt="WellMind">
         </div>
 
-        <!-- Sağ taraf (Login Form) -->
+        <!-- Right side: Login form -->
         <div class="right-side">
             <h2>Welcome to WellMind</h2>
             <p>Hey there, take a deep breath and log in!</p>
 
+            <!-- Login Form -->
             <form id="loginForm" action="#" method="POST">
+                <!-- Email input field -->
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email" required autocomplete="off">
 
+                <!-- Password input field -->
                 <label for="password">Password</label>
                 <div class="password-container">
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                
-
+            
+                <!-- Options below the form fields -->
                 <div class="options">
                     <label><input type="checkbox"> Remember me</label>
                     <a href="#">Forgot your password?</a>

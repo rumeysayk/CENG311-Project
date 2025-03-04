@@ -1,3 +1,6 @@
+// This script dynamically updates available time slots based on the selected therapist 
+// and shows a success message when the booking form is submitted.
+
 document.addEventListener("DOMContentLoaded", function () {
     const dateInput = document.getElementById("date");
     const timeSelect = document.getElementById("time");
@@ -5,18 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("booking-form");
     const successMessage = document.getElementById("success-message");
 
-    // 📌 Geçmiş tarihler seçilemez
     const today = new Date().toISOString().split("T")[0];
     dateInput.setAttribute("min", today);
 
-    // 📌 Her terapistin uygun olduğu saatler
     const therapistSchedules = {
         "dr_emily": ["09:00 AM - 10:30 AM", "02:00 PM - 03:30 PM"],
         "james_oconnor": ["10:00 AM - 11:30 AM", "04:00 PM - 05:30 PM"],
         "dr_sophia": ["11:00 AM - 12:30 PM", "06:00 PM - 07:30 PM"]
     };
 
-    // 📌 Terapist seçildiğinde uygun saatleri listele
     therapistSelect.addEventListener("change", function () {
         const selectedTherapist = therapistSelect.value;
 
@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 📌 Form Gönderildiğinde Başarı Mesajı Göster
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         form.style.display = "none";

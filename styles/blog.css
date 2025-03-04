@@ -1,5 +1,6 @@
 @import url('global.css');
 
+/* Active and hover states for navigation links */
 .nav-links li a.active {
     color: var(--blog-primary-color);
     background-color: var(--blog-secondary-color);
@@ -11,6 +12,7 @@
     background-color: var(--blog-secondary-color);
 }
 
+/* Styling for the login button */
 .login {
     color: var(--blog-primary-color);
     background-color: var(--blog-secondary-color);
@@ -20,7 +22,7 @@ body {
     background-color: var(--blog-primary-color);
 }
 
-
+/* Blog introduction section */
 .blog-intro {
     text-align: center;
     padding: 40px 20px;
@@ -43,6 +45,7 @@ body {
     text-align: center;
 }
 
+/* Main section background and typography */
 main {
     background-color: var(--blog-secondary-color);
     padding: 15px;
@@ -58,8 +61,8 @@ main {
     gap: 20px;
 }
 
+/* Featured blog post styling */
 /* First Blog */
-
 .featured {
     grid-column: span 2;
     display: flex;
@@ -82,7 +85,6 @@ main {
 }
 
 /* Other Blogs */
-
 .blog-card {
     background: white;
     padding: 15px;
@@ -103,6 +105,7 @@ main {
     color: #666;
 }
 
+/* "Read More" button styling */
 .read-more {
     display: inline-block;
     margin-bottom: 10px;
@@ -121,6 +124,7 @@ main {
     font-weight: bolder;
 }
 
+/* Author styling */
 .author {
     font-weight: lighter;
 }
