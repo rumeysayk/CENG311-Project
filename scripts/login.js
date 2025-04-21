@@ -1,6 +1,5 @@
-// This script prevents the default form submission and redirects to the home page 
-// if both email and password are provided. If either is missing, 
-// an alert prompts the user to enter both.
+// This script validates the login form using jQuery Validation Plugin
+// If valid, redirects to homepage. Otherwise, shows error messages.
 
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("loginForm");
@@ -19,4 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
+
+$(document).ready(function () {
+    $("#loginForm").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            password: "required"
+        },
+        messages: {
+            email: {
+                required: "Please enter your email.",
+                email: "Enter a valid email."
+            },
+            password: "Please enter your password."
+        },
+        submitHandler: function (form) {
+            // Eğer her şey doğruysa index.html'ye yönlendir
+            window.location.href = "index.html";
+        }
+    });
 });
