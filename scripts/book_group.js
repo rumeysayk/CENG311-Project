@@ -24,17 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const dayOfWeek = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
 
         if (timeSlots[dayOfWeek]) {
-            timeSelect.innerHTML = ""; 
-            timeSlots[dayOfWeek].forEach(time => {
+            timeSelect.innerHTML = "";
+            timeSlots[dayOfWeek].forEach((time, index) => {
                 const option = document.createElement("option");
                 option.value = time;
                 option.textContent = time;
+                if (index === 0) option.selected = true;
                 timeSelect.appendChild(option);
             });
-
-            timeSelect.disabled = false; 
+            timeSelect.disabled = false;
+            timeSelect.removeAttribute("disabled");
         } else {
-            timeSelect.innerHTML = `<option value="" disabled selected>No available slots</option>`;
+            timeSelect.innerHTML = "<option value='' disabled selected>No available slots</option>";
             timeSelect.disabled = true;
         }
     });
@@ -47,27 +48,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
     citySelect.addEventListener("change", function () {
         const selectedCity = citySelect.value;
-        
+
         if (locationsByCity[selectedCity]) {
-            locationSelect.innerHTML = ""; 
-            locationsByCity[selectedCity].forEach(location => {
+            locationSelect.innerHTML = "";
+            locationsByCity[selectedCity].forEach((location, index) => {
                 const option = document.createElement("option");
                 option.value = location;
                 option.textContent = location;
+                if (index === 0) option.selected = true;
                 locationSelect.appendChild(option);
             });
-
             locationSelect.disabled = false;
+            locationSelect.removeAttribute("disabled");
         } else {
-            locationSelect.innerHTML = `<option value="" disabled selected>No available locations</option>`;
+            locationSelect.innerHTML = "<option value='' disabled selected>No available locations</option>";
             locationSelect.disabled = true;
         }
     });
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
+        form.style.display = "none";
+        successMessage.classList.remove("hidden");
+    });
+});
 
-        form.style.display = "none"; 
-        successMessage.classList.remove("hidden"); 
+// jQuery Validation Plugin
+$(document).ready(function () {
+    $("#booking-form").validate({
+        ignore: [],
+        rules: {
+            name: "required",
+            surname: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            phone: "required",
+            city: "required",
+            location: "required",
+            "therapy-type": "required",
+            "group-type": "required",
+            date: "required",
+            time: "required"
+        },
+        messages: {
+            name: "Please enter your name",
+            surname: "Please enter your surname",
+            email: {
+                required: "Please enter your email",
+                email: "Please enter a valid email address"
+            },
+            phone: "Please enter your phone number",
+            city: "Please select a city",
+            location: "Please choose a location",
+            "therapy-type": "Please select a therapy type",
+            "group-type": "Please select a group type",
+            date: "Please pick a date",
+            time: "Please select a time slot"
+        },
+        submitHandler: function (form) {
+            $("#booking-form").hide();
+            $("#success-message").removeClass("hidden");
+        }
     });
 });
