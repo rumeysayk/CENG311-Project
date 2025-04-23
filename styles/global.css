@@ -183,13 +183,6 @@ footer {
     margin-left: 15px;
     padding-bottom: 2.5px;
 }
-.footer-links a {
-    color: var(--footer-secondary-color);
-    text-decoration: none;
-}
-.footer-links a:hover {
-    text-decoration: underline;
-}
 
 /* Shape */
 .shape {
