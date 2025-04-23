@@ -1,5 +1,6 @@
-// This script dynamically updates available time slots based on the selected therapist 
-// and shows a success message when the booking form is submitted with jQuery Validation.
+// This script uses jQuery UI Datepicker to dynamically update available time slots based on the selected therapist,
+// and jQuery Validation to validate the booking form and display a success message upon submission.
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const dateInput = document.getElementById("date");
@@ -9,14 +10,41 @@ document.addEventListener("DOMContentLoaded", function () {
     const successMessage = document.getElementById("success-message");
 
     const today = new Date().toISOString().split("T")[0];
-    dateInput.setAttribute("min", today);
+    dateInput.setAttribute("min", today); // Disable past dates
 
+    // Define therapists' available time slots
     const therapistSchedules = {
         "dr_emily": ["09:00 AM - 10:30 AM", "02:00 PM - 03:30 PM"],
         "james_oconnor": ["10:00 AM - 11:30 AM", "04:00 PM - 05:30 PM"],
         "dr_sophia": ["11:00 AM - 12:30 PM", "06:00 PM - 07:30 PM"]
     };
 
+    // Initialize jQuery UI datepicker with custom format and logic
+    $("#date").datepicker({
+        dateFormat: "yy-mm-dd",
+        minDate: 0,
+        onSelect: function () {
+            const therapist = $("#therapist").val();
+            if (therapist) {
+                const availableTimes = therapistSchedules[therapist];
+                $("#time").empty(); // Clear old options
+                $("#time").append('<option value="" disabled selected>Choose a time slot</option>');
+                availableTimes.forEach(time => {
+                    $("#time").append(`<option value="${time}">${time}</option>`);
+                });
+                $("#time").prop("disabled", false); // Enable time selection
+            }
+        }
+    });
+
+    // If therapist is changed after date is selected, re-trigger date logic
+    $("#therapist").on("change", function () {
+        if ($("#date").val()) {
+            $("#date").datepicker("setDate", $("#date").val()); // Re-trigger onSelect
+        }
+    });
+
+    // Vanilla JS fallback: update time slots on date change
     dateInput.addEventListener("change", function () {
         const selectedTherapist = therapistSelect.value;
         const selectedDate = dateInput.value;
@@ -39,14 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // If the user changes the therapy or changes the date, it will run again.
+    // Trigger time update if therapist is changed after date is already picked
     therapistSelect.addEventListener("change", function () {
         if (dateInput.value !== "") {
             dateInput.dispatchEvent(new Event("change"));
         }
     });
 
-    // Normal JS backup when form is submitted (if jQuery does not work)
+    // Fallback form submission handling (in case jQuery validation fails)
     form.addEventListener("submit", function (e) {
         e.preventDefault();
         form.style.display = "none";
@@ -54,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// jQuery form validation and submission success handler
 $(document).ready(function () {
     $("#booking-form").validate({
         rules: {

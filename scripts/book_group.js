@@ -1,16 +1,16 @@
-// This script manages dynamic date, time, and location selection in a booking form and displays a success message upon submission.
+// This script uses jQuery UI Datepicker to highlight holidays and dynamically load available time slots by weekday,
+// and populates location options based on selected city. It also uses jQuery Validation to validate the form fields
+// before displaying a success message upon submission.
 
-document.addEventListener("DOMContentLoaded", function () {
-    const dateInput = document.getElementById("date");
-    const timeSelect = document.getElementById("time");
-    const citySelect = document.getElementById("city");
-    const locationSelect = document.getElementById("location");
-    const form = document.getElementById("booking-form");
-    const successMessage = document.getElementById("success-message");
+$(function () {
+    const $date = $("#date");
+    const $time = $("#time");
+    const $city = $("#city");
+    const $location = $("#location");
+    const $form = $("#booking-form");
+    const $successMessage = $("#success-message");
 
-    const today = new Date().toISOString().split("T")[0];
-    dateInput.setAttribute("min", today);
-
+    // Time slots available by day of the week
     const timeSlots = {
         "Monday": ["09:00 AM - 11:00 AM", "01:00 PM - 03:00 PM"],
         "Tuesday": ["10:00 AM - 12:00 PM", "02:00 PM - 04:00 PM"],
@@ -19,64 +19,70 @@ document.addEventListener("DOMContentLoaded", function () {
         "Friday": ["10:30 AM - 12:30 PM", "05:00 PM - 07:00 PM"]
     };
 
-    dateInput.addEventListener("change", function () {
-        const selectedDate = new Date(dateInput.value);
-        const dayOfWeek = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
-
-        if (timeSlots[dayOfWeek]) {
-            timeSelect.innerHTML = "";
-            timeSlots[dayOfWeek].forEach((time, index) => {
-                const option = document.createElement("option");
-                option.value = time;
-                option.textContent = time;
-                if (index === 0) option.selected = true;
-                timeSelect.appendChild(option);
-            });
-            timeSelect.disabled = false;
-            timeSelect.removeAttribute("disabled");
-        } else {
-            timeSelect.innerHTML = "<option value='' disabled selected>No available slots</option>";
-            timeSelect.disabled = true;
-        }
-    });
-
+    // Locations available based on selected city
     const locationsByCity = {
         "istanbul": ["Taksim Center", "Kadıköy Therapy Hub", "Besiktas Mental Health"],
         "ankara": ["Kızılay Counseling", "Çankaya Wellness Center"],
         "izmir": ["Alsancak Therapy House", "Bornova Healing Center"]
     };
 
-    citySelect.addEventListener("change", function () {
-        const selectedCity = citySelect.value;
+    // List of public holidays (used for special styling in datepicker)
+    const holidays = ["2025-04-23", "2025-05-01", "2025-05-19", "2025-07-20"];
 
-        if (locationsByCity[selectedCity]) {
-            locationSelect.innerHTML = "";
-            locationsByCity[selectedCity].forEach((location, index) => {
-                const option = document.createElement("option");
-                option.value = location;
-                option.textContent = location;
-                if (index === 0) option.selected = true;
-                locationSelect.appendChild(option);
-            });
-            locationSelect.disabled = false;
-            locationSelect.removeAttribute("disabled");
-        } else {
-            locationSelect.innerHTML = "<option value='' disabled selected>No available locations</option>";
-            locationSelect.disabled = true;
+    // Initialize the jQuery UI Datepicker with holiday highlighting
+    $date.datepicker({
+        dateFormat: "yy-mm-dd",
+        minDate: 0, // Disable past dates
+        beforeShowDay: function (date) {
+            const formatted = $.datepicker.formatDate("yy-mm-dd", date);
+            if (holidays.includes(formatted)) {
+                return [true, "holiday", "Holiday"]; // Adds a CSS class and tooltip for holiday
+            }
+            return [true, "", ""];
+        },
+        onSelect: function (selectedDateStr) {
+            const selectedDate = new Date(selectedDateStr);
+            const dayName = selectedDate.toLocaleDateString('en-US', { weekday: 'long' });
+
+            // Load time slots based on the selected day
+            if (timeSlots[dayName]) {
+                $time.empty().append('<option disabled selected>Choose a time slot</option>');
+                timeSlots[dayName].forEach(time => {
+                    $time.append(`<option value="${time}">${time}</option>`);
+                });
+                $time.prop("disabled", false);
+            } else {
+                $time.html('<option value="" disabled selected>No available slots</option>');
+                $time.prop("disabled", true);
+            }
         }
     });
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        form.style.display = "none";
-        successMessage.classList.remove("hidden");
+    // Load location options based on selected city
+    $city.on("change", function () {
+        const selectedCity = $(this).val();
+        if (locationsByCity[selectedCity]) {
+            $location.empty().append('<option disabled selected>Choose a location</option>');
+            locationsByCity[selectedCity].forEach(loc => {
+                $location.append(`<option value="${loc}">${loc}</option>`);
+            });
+            $location.prop("disabled", false);
+        } else {
+            $location.html('<option value="" disabled selected>No available locations</option>');
+            $location.prop("disabled", true);
+        }
     });
-});
 
-// jQuery Validation Plugin
-$(document).ready(function () {
-    $("#booking-form").validate({
-        ignore: [],
+    // Show success message and hide form on manual submit
+    $form.on("submit", function (e) {
+        e.preventDefault();
+        $form.hide();
+        $successMessage.removeClass("hidden");
+    });
+
+    // jQuery Validation for form fields
+    $form.validate({
+        ignore: [], // Ensures hidden fields are not ignored if needed
         rules: {
             name: "required",
             surname: "required",
@@ -107,9 +113,9 @@ $(document).ready(function () {
             date: "Please pick a date",
             time: "Please select a time slot"
         },
-        submitHandler: function (form) {
-            $("#booking-form").hide();
-            $("#success-message").removeClass("hidden");
+        submitHandler: function () {
+            $form.hide();
+            $successMessage.removeClass("hidden");
         }
     });
 });
