@@ -196,6 +196,26 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  max-height: 500px; 
+  padding-right: 10px; 
+}
+.discussion-list {
+  max-height: 500px;
+  overflow: hidden; 
+  padding-right: 10px;
+}
+
+.discussions::-webkit-scrollbar {
+  width: 8px;
+}
+
+.discussions::-webkit-scrollbar-thumb {
+  background-color: var(--home-tertiary-color); 
+  border-radius: 10px;
+}
+
+.discussions::-webkit-scrollbar-track {
+  background: var(--home-primary-color); 
 }
 
 .discussions-header {
