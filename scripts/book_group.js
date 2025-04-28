@@ -119,3 +119,19 @@ $(function () {
         }
     });
 });
+
+var cities = [
+    "Ankara",
+    "İstanbul",
+    "İzmir"
+];
+// Autocomplete match by first letter
+$("#city").autocomplete({
+    source: function (request, response) {
+        var results = $.grep(cities, function (city) {
+            return city.toLowerCase().indexOf(request.term.toLowerCase()) === 0;
+        });
+        response(results);
+    },
+    minLength: 1
+});
