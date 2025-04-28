@@ -117,7 +117,7 @@ $(document).ready(function () {
         }
     });
 });
-
+/*
 var cities = [
     "Ankara",
     "İstanbul",
@@ -133,3 +133,4 @@ $("#city").autocomplete({
     },
     minLength: 1
 });
+*/

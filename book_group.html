@@ -97,7 +97,13 @@
         <div class="input-group">
           <div>
             <label for="city">Select Your City:</label>
-            <input type="text" id="city" placeholder="Select your city" required autocomplete="off">
+            <!-- <input type="text" id="city" placeholder="Select your city" required autocomplete="off"> -->
+            <select id="city" required>
+              <option value="" disabled selected>Choose a city</option>
+              <option value="istanbul">Istanbul</option>
+              <option value="ankara">Ankara</option>
+              <option value="izmir">Izmir</option>
+            </select>
           </div>
           <div>
             <label for="location">Choose Location:</label>
