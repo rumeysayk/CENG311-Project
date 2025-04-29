@@ -135,16 +135,15 @@ input[type="checkbox"] {
     margin-bottom: 20px;
 }
 
-a {
+.alink {
     color: var(--home-quaternary-color);
-    text-decoration: none;
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
 }
 
-.checkbox-container a:hover {
+/* .checkbox-container a:hover {
     text-decoration: underline;
-}
+} */
 
 /* Create Account Button */
 .create-account-btn {

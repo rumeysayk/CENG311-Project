@@ -72,6 +72,12 @@ p {
     font-weight: 600;
 }
 
+.logo a{
+    text-decoration: none;
+    color: #373A40;
+}
+
+
 header {
     position: fixed;
     z-index: 1000;
