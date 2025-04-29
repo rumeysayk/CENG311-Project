@@ -71,7 +71,7 @@ main {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    /*cursor: pointer;  GONNA CHANGE AFTER THE PROJECT*/
 
 }
 
@@ -92,7 +92,7 @@ main {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    /*cursor: pointer; GONNA CHANGED AFTER THE PROJECT*/
 }
 
 .blog-card img {
@@ -117,6 +117,10 @@ main {
     font-weight: bold;
 }
 
+/*
+
+GONNA CHANGED AFTER THE PROJECT
+
 .read-more:hover{
 color: #337a36 !important;
 }
@@ -131,7 +135,7 @@ color: #337a36 !important;
     font-weight: bold;
     color: #337a36 !important; 
 }
-
+*/
 .date {
     font-size: 0.8rem;
     font-weight: bolder;
