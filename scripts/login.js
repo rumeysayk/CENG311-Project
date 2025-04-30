@@ -1,3 +1,6 @@
+// This script also enhances the default checkbox using jQuery UI's Checkboxradio widget.
+// It applies a custom-styled checkbox for the "Remember me" option with visual feedback on selection.
+
 // This script validates the login form using jQuery Validation Plugin
 // If valid, redirects to homepage. Otherwise, shows error messages.
 
@@ -6,8 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (loginForm) {
         loginForm.addEventListener("submit", function (event) {
-            event.preventDefault(); 
-
+            event.preventDefault();
             const email = document.getElementById("email").value.trim();
             const password = document.getElementById("password").value.trim();
 
@@ -40,5 +42,11 @@ $(document).ready(function () {
             // Eğer her şey doğruysa index.html'ye yönlendir
             window.location.href = "index.html";
         }
+    });
+});
+
+$(function () {
+    $("#remember").checkboxradio({
+        icon: true
     });
 });

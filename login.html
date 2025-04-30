@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,26 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Delius&family=Domine:wght@400..700&family=DynaPuff:wght@400..700&family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-   
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Delius&family=Domine:wght@400..700&family=DynaPuff:wght@400..700&family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- jQuery Validation Plugin -->
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.5/jquery.validate.min.js"></script>
 
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- jQuery UI JS -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
     <script defer src="scripts/login.js"></script>
 
-
 </head>
+
 <body>
 
     <!-- Main Login Container -->
@@ -47,10 +56,11 @@
                 <div class="password-container">
                     <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
-            
+
                 <!-- Options below the form fields -->
                 <div class="options">
-                    <label><input type="checkbox"> Remember me</label>
+                    <input type="checkbox" id="remember" />
+                    <label for="remember">Remember me</label>
                     <span class="alink">Forgot your password?</span>
                 </div>
 
@@ -61,4 +71,5 @@
         </div>
     </div>
 </body>
+
 </html>
