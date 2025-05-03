@@ -27,9 +27,9 @@
     overflow: hidden; 
 }
 
-.home h1 {
+.home h1 { 
     font-size: 36px;
-    color: var(--home-h1-color); 
+    color: var(--home-quaternary-color); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,9 +39,10 @@
 }
 
 .inline-icon {
-    width: 25%; 
-    height: auto;
+    width: 400px; 
+    height: 400px;
     vertical-align: middle;
+    object-fit: contain;
 }
 
 .home h1 span:last-of-type {
