@@ -54,6 +54,11 @@ body {
     margin-bottom: 8px;
 }
 
+.right-side a{
+    text-decoration: none;
+    color: var(--home-quaternary-color) ;
+}
+
 p {
     color: var(--home-h1-color);
     font-size: 16px;
@@ -165,4 +170,5 @@ input[type="checkbox"] {
     font-family: "Quicksand", sans-serif;
     font-weight: 600;
 }
+
 
