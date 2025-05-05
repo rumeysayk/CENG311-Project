@@ -44,3 +44,8 @@ $(document).ready(function () {
         }
     });
 });
+
+$(function () {
+    // Apply jQuery UI checkboxradio styling
+    $("#terms").checkboxradio();
+});

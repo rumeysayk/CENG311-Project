@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
           // Display result
           musicBox.innerHTML = `
-            <h3>🎵 Songs for Your Mood</h3>
+            <h3><img src="assets/icons/blog/music-note.svg" class="emoji-icon" />  Songs for Your Mood <img src="assets/icons/blog/music-note.svg" class="emoji-icon" /> </h3>
             <ul>${songsHTML}</ul>
           `;
         })

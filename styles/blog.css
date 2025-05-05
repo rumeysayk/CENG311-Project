@@ -315,6 +315,14 @@ body {
     color: #d75a41;
   }
 
+  .emoji-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  
   
   
 
