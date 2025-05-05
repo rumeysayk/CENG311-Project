@@ -54,9 +54,9 @@ body {
     margin-bottom: 8px;
 }
 
-.right-side a{
+.right-side a {
     text-decoration: none;
-    color: var(--home-quaternary-color) ;
+    color: var(--home-quaternary-color);
 }
 
 p {
@@ -94,12 +94,12 @@ input {
 }
 
 input:focus {
-    border-color: var(--home-h1-color); 
-    
+    border-color: var(--home-h1-color);
+
 }
 
 input::placeholder {
-    color: var(--home-secondary-color); 
+    color: var(--home-secondary-color);
     font-style: italic;
 }
 
@@ -118,8 +118,8 @@ input[type="checkbox"] {
 }
 
 .name-fields input {
-    flex: 1; 
-    width: 50%; 
+    flex: 1;
+    width: 50%;
 }
 
 /* Password Input Container */
@@ -134,7 +134,7 @@ input[type="checkbox"] {
 }
 
 /* Remember me & Forgot password */
-.checkbox-container{
+.checkbox-container {
     display: flex;
     font-size: 14px;
     margin-bottom: 20px;
@@ -227,4 +227,3 @@ label[for="terms"] {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
-

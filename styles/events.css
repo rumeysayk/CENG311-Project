@@ -5,6 +5,7 @@
   color: var(--events-primary-color);
   background-color: var(--events-secondary-color);
 }
+
 .nav-links a.active,
 .nav-links a:hover {
   color: var(--events-primary-color);
@@ -27,6 +28,7 @@ body {
   text-align: center;
   padding: 30px 20px;
 }
+
 .hero h1 {
   margin-top: 8%;
   font-size: 42px;
@@ -34,6 +36,7 @@ body {
   font-family: "Agbalumo", serif;
   font-weight: 400;
 }
+
 .hero p {
   font-size: 18px;
   max-width: 700px;
@@ -54,9 +57,11 @@ body {
   width: 100%;
   text-align: center;
 }
+
 .bg-dark {
   background-color: #a5dd9b;
 }
+
 .bg-light {
   background-color: var(--events-primary-color);
 }
@@ -97,11 +102,13 @@ body {
   height: 250px;
   padding: 50px 20px;
 }
+
 .event-card img {
   height: 50%;
   object-fit: cover;
   border-radius: 10px;
 }
+
 .event-card p {
   font-size: 14px;
   color: #555;
@@ -131,6 +138,7 @@ body {
   transition: border-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 2px 8px rgba(121, 172, 120, 0.2);
 }
+
 #event-search:focus {
   border-color: #4f9f64;
   box-shadow: 0 0 10px rgba(79, 159, 100, 0.5);
@@ -196,9 +204,11 @@ body {
   text-align: center;
   z-index: 1;
 }
+
 .book-btn:hover {
   color: white;
 }
+
 .book-btn:after {
   content: "";
   background-color: var(--events-btn-color);
@@ -211,6 +221,7 @@ body {
   pointer-events: none;
   transition: 0.2s;
 }
+
 .book-btn:hover:after {
   top: 0px;
   left: 0px;
@@ -222,6 +233,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 600px) {
   .events {
     grid-template-columns: repeat(1, 1fr);

@@ -1,6 +1,5 @@
-// This script uses jQuery UI Datepicker to highlight holidays and dynamically load available time slots by weekday,
-// and populates location options based on selected city. It also uses jQuery Validation to validate the form fields
-// before displaying a success message upon submission.
+// jQuery-based script that uses jQuery UI Datepicker to highlight holidays, dynamically loads time slots and locations,
+// and validates form fields before showing a success message.
 
 $(function () {
     const $date = $("#date");
@@ -36,7 +35,7 @@ $(function () {
         beforeShowDay: function (date) {
             const formatted = $.datepicker.formatDate("yy-mm-dd", date);
             if (holidays.includes(formatted)) {
-                return [true, "holiday", "Holiday"]; // Adds a CSS class and tooltip for holiday
+                return [true, "holiday", "Holiday"];
             }
             return [true, "", ""];
         },

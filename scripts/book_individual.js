@@ -1,6 +1,5 @@
-// This script uses jQuery UI Datepicker to dynamically update available time slots based on the selected therapist,
-// and jQuery Validation to validate the booking form and display a success message upon submission.
-
+// jQuery UI Datepicker and jQuery Validation-based script that updates available time slots dynamically by selected therapist,
+// disables past dates, and shows a success message upon form submission.
 
 document.addEventListener("DOMContentLoaded", function () {
     const dateInput = document.getElementById("date");

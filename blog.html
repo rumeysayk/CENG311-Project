@@ -1,227 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Motivation & Blog | WellMind</title>
 
-    <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="styles/blog.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motivation & Blog | WellMind</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Delius&family=Domine:wght@400..700&family=DynaPuff:wght@400..700&family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&family=Quicksand:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/blog.css" />
 
-  <body>
-    <!-- Header with Navigation Menu -->
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html">WellMind</a>
-          <!-- Logo can be added here -->
-          <!-- <img src="logo.png" alt="WellMind"> -->
-        </div>
-        <ul class="nav-links">
-          <li>
-            <a href="index.html" class="nav_home" data-page="home">Home</a>
-          </li>
-          <li>
-            <a href="support.html" class="nav_support" data-page="support"
-              >Psychological Support</a
-            >
-          </li>
-          <li>
-            <a href="events.html" class="nav_events" data-page="events"
-              >Events</a
-            >
-          </li>
-          <li>
-            <a href="forum.html" class="nav_forum" data-page="forum"
-              >Forum & Community</a
-            >
-          </li>
-          <li>
-            <a href="blog.html" class="nav_blog active" data-page="blog"
-              >Motivation & Blog</a
-            >
-          </li>
-        </ul>
-        <a href="login.html" class="login">Login</a>
-      </nav>
-    </header>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Delius&family=Domine:wght@400..700&family=DynaPuff:wght@400..700&family=Gupter:wght@400;500;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet" />
 
-    <!-- Main Content -->
-    <!-- Blog Introduction Section -->
-    <div class="blog-intro">
-      <h1>WellMind <span class="title">Blog</span></h1>
-      <p>
-        Dive into our blog for inspiring reads on mental well-being,
-        mindfulness, and self-improvement. As you explore expert insights and
-        heartfelt stories, let the experience be enriched with music—choose a
-        song that matches your mood and let it accompany your reading journey.
-      </p>
-    </div>
-    <div class="mood-toggle-box" id="moodToggle">
-      <img src="assets/icons/blog/headphones-emoji.svg" alt="headphones" class="emoji-icon" />
-      How Are You Feeling Today?
-    </div>
+  <script src="scripts/mood-music.js"></script>
 
-    <div class="mood-container hidden" id="moodContainer">
-      <h2><img src="assets/icons/blog/music-notes-orange.svg" class="emoji-icon" /> How Are You Feeling Today?<img src="assets/icons/blog/music-notes-orange.svg" class="emoji-icon" /></h2>
-      <select id="mood-select">
-        <option value="">Choose your mood...</option>
-        <option value="happy">Happy </option>
-        <option value="sad">Sad </option>
-        <option value="chill">Chill </option>
-        <option value="angry">Angry </option>
-        <option value="love">Love </option>
-        <option value="relax">Relax </option>
-      </select>
-      <div id="music-box"></div>
-    </div>
-    
-    <div class="wave-divider">
-      <img
-        src="assets/images/blog/layered-waves-haikei.svg"
-        alt="Wave Divider"
-        class="wave-img"
-      />
-    </div>
+</head>
 
-    <main>
-      <div class="container">
-        <!-- Featured Blog Post -->
-        <!-- onclick="window.location.href='#';" give clickable feature -->
-        <div class="featured">
-          <img src="assets/icons/blog/Placebo.png" alt="Placebo" />
-          <div>
-            <p class="date">
-              <span class="author">Psychologist Afra İşler </span> March 1, 2025
-            </p>
-            <h2>
-              What is the Placebo Effect? Is It Possible to Heal By Believing?
-            </h2>
-            <p>
-              Let's look at the details of the placebo effect, which is a
-              representation of the incredible connection between mind and body,
-              while attempting to understand the human mind using the human
-              mind!
-            </p>
-            <span class="read-more">Read More</span>
-          </div>
-        </div>
+<body>
+  <!-- Header with Navigation Menu -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">WellMind</a>
+        <!-- Logo can be added here -->
+        <!-- <img src="logo.png" alt="WellMind"> -->
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html" class="nav_home" data-page="home">Home</a>
+        </li>
+        <li>
+          <a href="support.html" class="nav_support" data-page="support">Psychological Support</a>
+        </li>
+        <li>
+          <a href="events.html" class="nav_events" data-page="events">Events</a>
+        </li>
+        <li>
+          <a href="forum.html" class="nav_forum" data-page="forum">Forum & Community</a>
+        </li>
+        <li>
+          <a href="blog.html" class="nav_blog active" data-page="blog">Motivation & Blog</a>
+        </li>
+      </ul>
+      <a href="login.html" class="login">Login</a>
+    </nav>
+  </header>
 
-        <!-- Blog Post Cards -->
-        <div class="blog-card">
-          <a href="">
-            <img
-              src="assets/icons/blog/Headache.webp"
-              alt="Tension-Type Headaches"
-          /></a>
-          <a href=""></a>
+  <!-- Main Content -->
+  <!-- Blog Introduction Section -->
+  <div class="blog-intro">
+    <h1>WellMind <span class="title">Blog</span></h1>
+    <p>
+      Dive into our blog for inspiring reads on mental well-being,
+      mindfulness, and self-improvement. As you explore expert insights and
+      heartfelt stories, let the experience be enriched with music—choose a
+      song that matches your mood and let it accompany your reading journey.
+    </p>
+  </div>
+  <div class="mood-toggle-box" id="moodToggle">
+    <img src="assets/icons/blog/headphones-emoji.svg" alt="headphones" class="emoji-icon" />
+    How Are You Feeling Today?
+  </div>
+
+  <div class="mood-container hidden" id="moodContainer">
+    <h2><img src="assets/icons/blog/music-notes-orange.svg" class="emoji-icon" /> How Are You Feeling Today?<img
+        src="assets/icons/blog/music-notes-orange.svg" class="emoji-icon" /></h2>
+    <select id="mood-select">
+      <option value="">Choose your mood...</option>
+      <option value="happy">Happy </option>
+      <option value="sad">Sad </option>
+      <option value="chill">Chill </option>
+      <option value="angry">Angry </option>
+      <option value="love">Love </option>
+      <option value="relax">Relax </option>
+    </select>
+    <div id="music-box"></div>
+  </div>
+
+  <div class="wave-divider">
+    <img src="assets/images/blog/layered-waves-haikei.svg" alt="Wave Divider" class="wave-img" />
+  </div>
+
+  <main>
+    <div class="container">
+      <!-- Featured Blog Post -->
+      <!-- onclick="window.location.href='#';" give clickable feature -->
+      <div class="featured">
+        <img src="assets/icons/blog/Placebo.png" alt="Placebo" />
+        <div>
           <p class="date">
-            <span class="author">Psychologist Pınar Karataş </span> February 25,
-            2025
+            <span class="author">Psychologist Afra İşler </span> March 1, 2025
           </p>
-
           <h2>
-            <a href=""
-              >Tension-Type Headaches: Symptoms, Causes, and Treatment</a
-            >
+            What is the Placebo Effect? Is It Possible to Heal By Believing?
           </h2>
           <p>
-            A tension-type headache is the most common type of headache and is
-            usually caused by stress-induced muscle tension.
-          </p>
-          <span class="read-more">Read More</span>
-        </div>
-        <div class="blog-card">
-          <img src="assets/icons/blog/Exam.webp" alt="Exam Stress" />
-          <p class="date">
-            <span class="author">Psychologist Simay Yılmaz</span> February 20,
-            2025
-          </p>
-
-          <h2><span>How to Cope with Test Anxiety and Exam Stress</span></h2>
-          <p>
-            Test anxiety is an emotion that is associated with concerns about
-            future exam performance. Test anxiety, particularly in students,
-            improves performance at normal levels but has a negative impact when
-            it becomes excessive.
-          </p>
-          <span class="read-more">Read More</span>
-        </div>
-        <div class="blog-card">
-          <img
-            src="assets/icons/blog/Shopping-Addiction.webp"
-            alt="Shopping Addiction"
-          />
-          <p class="date">
-            <span class="author">Psychologist Simay Yılmaz</span> February 15,
-            2025
-          </p>
-
-          <h2>
-            <span
-              >What is Shopping Addiction (Oniomania)? Signs, Causes and
-              Treatment of Compulsive Buying</span
-            >
-          </h2>
-
-          <p>
-            Explore the intricacies of shopping addiction, or Oniomania, a
-            behavior that millions grapple with. Understand its definition,
-            symptoms, and the dangers of unchecked compulsive buying. Discover
-            the science behind this addiction and steps for overcoming it.
-          </p>
-
-          <span class="read-more">Read More</span>
-        </div>
-
-        <div class="blog-card">
-          <img src="assets/icons/blog/SayingNo.png" alt="Saying No" />
-          <p class="date">
-            <span class="author">Alara Candan</span> February 10, 2025
-          </p>
-
-          <h2>
-            <span>How to Stop Saying Yes When You Actually Want to Say No</span>
-          </h2>
-          <p>
-            Being able to say no is a very important skill that sets personal
-            boundaries. However, being unable to say no is a very common
-            problem. This article discusses ways to say no.
+            Let's look at the details of the placebo effect, which is a
+            representation of the incredible connection between mind and body,
+            while attempting to understand the human mind using the human
+            mind!
           </p>
           <span class="read-more">Read More</span>
         </div>
       </div>
-    </main>
 
-    <div class="wave-divider">
-      <img
-        src="assets/images/blog/layered-waves-bottom2.svg"
-        alt="Wave Divider"
-        class="wave-img"
-      />
-    </div>
+      <!-- Blog Post Cards -->
+      <div class="blog-card">
+        <a href="">
+          <img src="assets/icons/blog/Headache.webp" alt="Tension-Type Headaches" /></a>
+        <a href=""></a>
+        <p class="date">
+          <span class="author">Psychologist Pınar Karataş </span> February 25,
+          2025
+        </p>
 
-    <!-- Footer -->
-    <footer>
-      <div class="footer-container">
-        <p>&copy; 2025 WellMind</p>
-        <div class="footer-links">
-          <p>Terms & Conditions</p>
-          <p>Privacy</p>
-          <p>FAQs</p>
-          <p>Contact</p>
-        </div>
+        <h2>
+          <a href="">Tension-Type Headaches: Symptoms, Causes, and Treatment</a>
+        </h2>
+        <p>
+          A tension-type headache is the most common type of headache and is
+          usually caused by stress-induced muscle tension.
+        </p>
+        <span class="read-more">Read More</span>
       </div>
-    </footer>
+      <div class="blog-card">
+        <img src="assets/icons/blog/Exam.webp" alt="Exam Stress" />
+        <p class="date">
+          <span class="author">Psychologist Simay Yılmaz</span> February 20,
+          2025
+        </p>
 
-    <script src="scripts/mood-music.js"></script>
-  </body>
+        <h2><span>How to Cope with Test Anxiety and Exam Stress</span></h2>
+        <p>
+          Test anxiety is an emotion that is associated with concerns about
+          future exam performance. Test anxiety, particularly in students,
+          improves performance at normal levels but has a negative impact when
+          it becomes excessive.
+        </p>
+        <span class="read-more">Read More</span>
+      </div>
+      <div class="blog-card">
+        <img src="assets/icons/blog/Shopping-Addiction.webp" alt="Shopping Addiction" />
+        <p class="date">
+          <span class="author">Psychologist Simay Yılmaz</span> February 15,
+          2025
+        </p>
+
+        <h2>
+          <span>What is Shopping Addiction (Oniomania)? Signs, Causes and
+            Treatment of Compulsive Buying</span>
+        </h2>
+
+        <p>
+          Explore the intricacies of shopping addiction, or Oniomania, a
+          behavior that millions grapple with. Understand its definition,
+          symptoms, and the dangers of unchecked compulsive buying. Discover
+          the science behind this addiction and steps for overcoming it.
+        </p>
+
+        <span class="read-more">Read More</span>
+      </div>
+
+      <div class="blog-card">
+        <img src="assets/icons/blog/SayingNo.png" alt="Saying No" />
+        <p class="date">
+          <span class="author">Alara Candan</span> February 10, 2025
+        </p>
+
+        <h2>
+          <span>How to Stop Saying Yes When You Actually Want to Say No</span>
+        </h2>
+        <p>
+          Being able to say no is a very important skill that sets personal
+          boundaries. However, being unable to say no is a very common
+          problem. This article discusses ways to say no.
+        </p>
+        <span class="read-more">Read More</span>
+      </div>
+    </div>
+  </main>
+
+  <div class="wave-divider">
+    <img src="assets/images/blog/layered-waves-bottom2.svg" alt="Wave Divider" class="wave-img" />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 WellMind</p>
+      <div class="footer-links">
+        <p>Terms & Conditions</p>
+        <p>Privacy</p>
+        <p>FAQs</p>
+        <p>Contact</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

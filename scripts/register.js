@@ -1,17 +1,27 @@
-// This script checks if the registration form is valid when the "Create Account" button is clicked. 
-// If valid, it redirects to the homepage. If invalid, it shows the missing fields.
+/**
+ * This script handles registration form validation and submission behavior.
+ * 
+ * Features:
+ * - Validates the form when "Create Account" is clicked using both HTML5 and jQuery Validation Plugin.
+ * - If the form is valid, it redirects to the homepage (index.html).
+ * - Displays missing field messages if the form is incomplete.
+ * - Uses jQuery UI's Checkboxradio to enhance the "Terms & Conditions" checkbox appearance.
+ * 
+ * Technologies: Vanilla JS, jQuery Validation Plugin, jQuery UI Checkboxradio
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
     const createAccountBtn = document.querySelector(".create-account-btn");
 
     if (createAccountBtn) {
         createAccountBtn.addEventListener("click", function (event) {
             event.preventDefault();
-            
+
             const form = document.getElementById("register-form");
             if (form.checkValidity()) {
-                window.location.href = "index.html"; 
+                window.location.href = "index.html";
             } else {
-                form.reportValidity(); 
+                form.reportValidity();
             }
         });
     }

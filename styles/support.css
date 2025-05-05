@@ -3,19 +3,19 @@
 /* Styles for active navigation links */
 .nav-links li a.active {
     color: var(--support-primary-color);
-    background-color: var(--support-secondary-color); 
+    background-color: var(--support-secondary-color);
 }
 
-.nav-links a.active, 
+.nav-links a.active,
 .nav-links a:hover {
     color: var(--support-primary-color);
-    background-color: var(--support-secondary-color); 
+    background-color: var(--support-secondary-color);
 }
 
 /* Styles for login button */
 .login {
     color: var(--support-primary-color);
-    background-color: var(--support-secondary-color); 
+    background-color: var(--support-secondary-color);
 }
 
 body {
@@ -110,13 +110,13 @@ body {
     display: inline-block;
     text-align: center;
     z-index: 1;
-  }
+}
 
-  .book-btn:hover {
+.book-btn:hover {
     color: white;
-  }
+}
 
-  .book-btn:after {
+.book-btn:after {
     content: "";
     background-color: var(--support-btn-color);
     width: 100%;
@@ -127,18 +127,18 @@ body {
     z-index: -1;
     pointer-events: none;
     transition: 0.2s;
-  }
-  
-  .book-btn:hover:after {
+}
+
+.book-btn:hover:after {
     top: 0px;
     left: 0px;
-  }
-  
-  @media (min-width: 760px) {
+}
+
+@media (min-width: 760px) {
     .book-btn {
-      padding: 13px 50px 13px;
+        padding: 13px 50px 13px;
     }
-  }
+}
 
 /* Therapists Section */
 .therapists {
@@ -172,13 +172,13 @@ body {
     border-radius: 15px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     max-height: 400px;
 }
 
 .therapist-card:hover {
     transform: scale(1.1);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -187,7 +187,7 @@ body {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 3px solid var(--support-secondary-color); 
+    border: 3px solid var(--support-secondary-color);
     padding: 2px;
     object-fit: cover;
 }
@@ -208,7 +208,7 @@ body {
     position: absolute;
     top: -30%;
     left: 2%;
-    width: 26%; 
+    width: 26%;
     height: auto;
 }
 
@@ -217,6 +217,6 @@ body {
     position: absolute;
     bottom: -30%;
     right: -5px;
-    width: 20%; 
+    width: 20%;
     height: auto;
 }

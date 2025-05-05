@@ -3,19 +3,19 @@
 /* Active link styles for navigation */
 .nav-links li a.active {
     color: white;
-    background-color: var(--home-secondary-color); 
+    background-color: var(--home-secondary-color);
 }
 
-.nav-links a.active, 
+.nav-links a.active,
 .nav-links a:hover {
     color: white;
-    background-color: var(--home-secondary-color); 
+    background-color: var(--home-secondary-color);
 }
 
 /* Login button styles */
 .login {
     color: white;
-    background: var(--home-secondary-color); 
+    background: var(--home-secondary-color);
 }
 
 /* Home Section */
@@ -23,23 +23,23 @@
     background-color: var(--home-primary-color);
     text-align: center;
     padding: 120px 20px;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
 }
 
-.home h1 { 
+.home h1 {
     font-size: 36px;
-    color: var(--home-quaternary-color); 
+    color: var(--home-quaternary-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px;
     font-family: "Agbalumo", serif;
     font-weight: 400;
 }
 
 .inline-icon {
-    width: 400px; 
+    width: 400px;
     height: 400px;
     vertical-align: middle;
     object-fit: contain;
@@ -47,7 +47,7 @@
 
 .home h1 span:last-of-type {
     position: relative;
-    top: 80px; 
+    top: 80px;
 }
 
 
@@ -55,16 +55,16 @@
 .intro {
     margin-top: 0%;
     padding: 40px;
-    text-align: center; 
+    text-align: center;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
     justify-content: center;
-    align-items: center;  
-    width: 80%;  
-    max-width: 800px;  
-    margin-left: auto; 
-    margin-right: auto;  
-    line-height: 1.6;  
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }
 
 .intro h2 {
@@ -78,8 +78,8 @@
 .intro p {
     font-size: 18px;
     color: var(--p-color);
-    width: 100%;  
-    text-align: center; 
+    width: 100%;
+    text-align: center;
     margin-top: 10px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
@@ -87,17 +87,17 @@
 
 .motivation-icon {
     display: block;
-    margin: 10px auto;  
-    width: 20%;  
-    height: auto;  
-    opacity: 0.9;  
+    margin: 10px auto;
+    width: 20%;
+    height: auto;
+    opacity: 0.9;
 }
 
 /* Psychological Support Section */
 .psych-support {
     background-color: var(--support-primary-color);
     padding: 26px 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 .psych-support h2 {
@@ -125,16 +125,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10%; 
+    gap: 10%;
     margin-top: 50px;
 }
 
 .support-item {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 300px; 
+    max-width: 300px;
 }
 
 /* Therapy Option Boxes (Only Image) */
@@ -143,7 +143,7 @@
     padding: 20px;
     border-radius: 15px;
     width: 300px;
-    height: 300px; 
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -242,12 +242,12 @@
 
 .event-deco {
     position: absolute;
-    top: 40px; 
+    top: 40px;
     left: 50%;
-    transform: translateX(-50%); 
-    width: 20%; 
+    transform: translateX(-50%);
+    width: 20%;
     height: auto;
-    opacity: 0.8; 
+    opacity: 0.8;
 }
 
 .event-deco img {
@@ -256,10 +256,29 @@
 }
 
 /* Overlapping Randomized Positions */
-.card1 { top: 0px; left: 10%; transform: rotate(-8deg); }
-.card2 { top: 40px; right: 15%; transform: rotate(5deg); }
-.card3 { top: 80px; left: 5%; transform: rotate(-3deg); }
-.card4 { top: 120px; right: 10%; transform: rotate(6deg); }
+.card1 {
+    top: 0px;
+    left: 10%;
+    transform: rotate(-8deg);
+}
+
+.card2 {
+    top: 40px;
+    right: 15%;
+    transform: rotate(5deg);
+}
+
+.card3 {
+    top: 80px;
+    left: 5%;
+    transform: rotate(-3deg);
+}
+
+.card4 {
+    top: 120px;
+    right: 10%;
+    transform: rotate(6deg);
+}
 
 .event-card:hover {
     transform: scale(1.05);
@@ -268,7 +287,7 @@
 
 /* Forum Section */
 .forum {
-    position: relative; 
+    position: relative;
     background-color: var(--forum-primary-color);
     text-align: center;
     padding: 80px 20px;
@@ -297,7 +316,7 @@
     position: absolute;
     bottom: -16%;
     left: 20px;
-    width: 22%; 
+    width: 22%;
     height: auto;
 }
 
@@ -305,7 +324,7 @@
     position: absolute;
     top: -26%;
     right: 5%;
-    width: 22%; 
+    width: 22%;
     height: auto;
 }
 
@@ -369,7 +388,7 @@
 .blog {
     background-color: var(--blog-primary-color);
     text-align: center;
-    padding: 10px 20px ;
+    padding: 10px 20px;
     color: white;
 }
 
@@ -454,6 +473,3 @@
 .btn-view-all:hover {
     opacity: 0.8;
 }
-
-
-

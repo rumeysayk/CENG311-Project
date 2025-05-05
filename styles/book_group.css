@@ -14,7 +14,7 @@ body {
 *,
 *::before,
 *::after {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .booking-image {
@@ -64,7 +64,8 @@ label {
 }
 
 /* General input and textarea styling with padding and border-radius */
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -82,22 +83,22 @@ input:not(:placeholder-shown) {
 
 input[type="date"] {
     color: #8e8e8e;
-  }
+}
 
-  input[type="date"]:valid {
+input[type="date"]:valid {
     color: var(--p-color);
-  }
+}
 
-  input[type="date"]::-webkit-calendar-picker-indicator {
+input[type="date"]::-webkit-calendar-picker-indicator {
     filter: grayscale(100%);
     opacity: 0.6;
-  }
-  
+}
 
-  input[type="date"]:valid::-webkit-calendar-picker-indicator {
+
+input[type="date"]:valid::-webkit-calendar-picker-indicator {
     filter: none;
     opacity: 1;
-  }
+}
 
 /* Styling for select dropdown elements */
 select {
@@ -112,12 +113,13 @@ select {
 select:valid {
     color: var(--p-color);
 }
-  
-  select option:disabled {
+
+select option:disabled {
     color: #8e8e8e;
 }
 
-.input-group, .therapy-group {
+.input-group,
+.therapy-group {
     justify-content: center;
     display: flex;
     gap: 10%;
@@ -143,19 +145,21 @@ select:valid {
     gap: 10%;
 }
 
-#city, #location {
-    width: 100%; 
+#city,
+#location {
+    width: 100%;
 }
 
 /* Adjusting the layout of city and location dropdown fields */
-.input-group > div {
+.input-group>div {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10%;
 }
 
-#city, #location {
+#city,
+#location {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -174,30 +178,30 @@ textarea {
 
 /* Styling the submit button with hover and active effects */
 .submit-btn {
-  background-color: var(--support-tertiary-color);
-  border: 1px solid var(--support-tertiary-color);
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  padding: 13px 23px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  touch-action: manipulation;
-  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
-  user-select: none;
-  -webkit-user-select: none;
-  width: auto;
-  display: block;
-  margin: 0 auto;
+    background-color: var(--support-tertiary-color);
+    border: 1px solid var(--support-tertiary-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .submit-btn:hover {
@@ -206,19 +210,19 @@ textarea {
 }
 
 .submit-btn:focus-visible {
-  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
-  transition: box-shadow .2s;
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
 }
 
 .submit-btn:active {
-  transform: scale(.96);
+    transform: scale(.96);
 }
 
 .submit-btn:disabled {
-  border-color: #DDDDDD;
-  color: #DDDDDD;
-  cursor: not-allowed;
-  opacity: 1;
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    cursor: not-allowed;
+    opacity: 1;
 }
 
 /* Success Message */
@@ -230,11 +234,13 @@ h2 {
     font-family: "Agbalumo", serif;
     font-weight: 200;
 }
+
 #success-message {
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
 }
+
 #success-message p {
     text-align: center;
 }
@@ -256,14 +262,13 @@ label.error {
     display: flex;
     align-items: center;
     transition: transform 0.2s ease;
-  }
-  
-  .back-arrow img {
+}
+
+.back-arrow img {
     width: 80px;
     height: 80px;
-  }
-  
-  .back-arrow:hover {
+}
+
+.back-arrow:hover {
     transform: scale(1.1);
-  }
-  
+}
