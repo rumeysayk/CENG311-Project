@@ -4,6 +4,12 @@ Welcome to **WellMind**, a web-based platform designed to promote mental well-be
 
 ---
 
+### 📌 Live Demo
+
+[Click here to view the live site on GitHub Pages 🚀](https://rumeysayk.github.io/CENG311-Project/)
+
+---
+
 ## 🖼️ Preview
 
 ### 🌐 Home Page
